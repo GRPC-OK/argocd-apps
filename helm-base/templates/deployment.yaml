@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: {{ required "replicaCount 까묵지 말라고 했지!" .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: cicd-practice
+  template:
+    metadata:
+      labels:
+        app: cicd-practice
+    spec:
+      containers:
+      - name: my-container
+        image: {{ required "image 까묵지 말라고 했지!" .Values.image }}
+        ports:
+        - containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          failureThreshold: 3

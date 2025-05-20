@@ -1,0 +1,15 @@
+apiVersion: v2
+name: prometheus-stack
+description: A Helm chart for Kubernetes
+type: application
+version: 0.1.0
+appVersion: "1.0"
+
+dependencies:
+- name: kube-prometheus-stack
+  version: "57.0.3"
+  repository: "https://prometheus-community.github.io/helm-charts"
+
+# argocd에서 에러나서 일단 helm으로 수동 설치 후퇴..
+# helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+# helm install prometheus-stack prometheus-community/kube-prometheus-stack -n prometheus-stack --version 57.0.3 --create-namespace --values ./values.yaml
