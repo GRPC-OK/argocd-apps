@@ -1,0 +1,4 @@
+replicaCount:  1
+image: jshwj/nextjs-test:v1.0
+host: b.intellisia.site
+port: 3000
