@@ -19,4 +19,7 @@ spec:
         ports:
         - containerPort: {{ required "port는 필수값입니다!" .Values.port }}
           protocol: TCP
+        env:
+        - name: DATABASE_URL
+          value: "postgresql://root:kisia2023!@intellisia-db.czgsws8m4x8o.ap-northeast-2.rds.amazonaws.com:5432/postgres"
         resources: {{ toYaml .Values.resources | default "{}" | nindent 10 }}
