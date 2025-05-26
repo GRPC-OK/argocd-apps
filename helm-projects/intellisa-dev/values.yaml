@@ -1,5 +1,5 @@
 replicaCount: 1
-image: "nginx:latest"
+image: "seaproject/my-app""
 host: "test.intellisia.site"
 port: 80
 resources:
