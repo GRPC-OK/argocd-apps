@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment 
+  name: my-deployment
 spec:
   replicas: {{ required "replicaCount 까묵지 말라고 했지!" .Values.replicaCount }}
   selector:
     matchLabels:
-      app: cicd-practice 
+      app: cicd-practice
   template:
     metadata:
       labels:
@@ -14,7 +14,9 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: {{ required "image 까묵지 말라고 했지!" .Values.image }}
+        image: "{{ required "image.repository는 필수값입니다!" .Values.image.repository }}:{{ required "image.tag는 필수값입니다!" .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy | default "IfNotPresent" }}
         ports:
-        - containerPort: {{ .Values.port }}
-        resources: {{ toYaml .Values.resources | nindent 10 }}
+        - containerPort: {{ required "port는 필수값입니다!" .Values.port }}
+          protocol: TCP
+        resources: {{ toYaml .Values.resources | default "{}" | nindent 10 }}
