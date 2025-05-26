@@ -4,7 +4,7 @@ host: "test.intellisia.site"
 port: 80
 resources:
   requests: # 최소 보장 리소스
-    cpu: "100m"    # CPU 0.1 코어 요청 (예: 100 millicores)
+    cpu: "100m"    # CPU 0.1 코어 요청 maybe
     memory: "128Mi" # 메모리 128 Mebibytes 요청
   limits:   # 최대 사용 가능 리소스
     cpu: "500m"    # CPU 0.5 코어까지 사용 제한
@@ -20,4 +20,3 @@ resources:
   limits:   # 최대 사용 가능 리소스
     cpu: "500m"    # CPU 0.5 코어까지 사용 제한
     memory: "256Mi" # 메모리 256 Mebibytes까지 사용 제한
-    
