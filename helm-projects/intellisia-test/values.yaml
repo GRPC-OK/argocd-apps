@@ -3,7 +3,7 @@ image:
   repository: "seaproject/my-app"
   tag: "latest"
   pullPolicy: IfNotPresent
-host: "test.intellisia.site"
+host: "testproject2.intellisia.site"
 port: 3000
 resources:
   requests:
