@@ -1,0 +1,20 @@
+{
+  "port": 3000,
+  "resources": {
+    "limits": {
+      "cpu": "200m",
+      "memory": "256Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "128Mi"
+    }
+  },
+  "replicaCount": 1,
+  "image": {
+    "repository": "seaproject/my-app",
+    "tag": "fc0f030",
+    "pullPolicy": "IfNotPresent"
+  },
+  "host": "test0001.intellisia.site"
+}
