@@ -12,7 +12,7 @@
   },
   "replicaCount": 1,
   "image": {
-    "repository": "seaproject/summer",
+    "repository": "seaproject/my-app",
     "tag": "cdd9fce",
     "pullPolicy": "IfNotPresent"
   },
