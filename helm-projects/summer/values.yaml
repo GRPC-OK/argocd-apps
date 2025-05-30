@@ -1,4 +1,5 @@
 {
+  "port": 3000,
   "resources": {
     "limits": {
       "cpu": "200m",
@@ -9,8 +10,7 @@
       "memory": "128Mi"
     }
   },
-  "replicaCount": 2,
-  "containerPort": 3000,
+  "replicaCount": 1,
   "image": {
     "repository": "seaproject/summer",
     "tag": "cdd9fce",
