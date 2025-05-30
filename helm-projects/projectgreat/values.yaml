@@ -1,0 +1,19 @@
+{
+  "resources": {
+    "limits": {
+      "cpu": "200m",
+      "memory": "256Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "128Mi"
+    }
+  },
+  "replicaCount": 1,
+  "containerPort": 8080,
+  "image": {
+    "repository": "seaproject/projectgreat",
+    "tag": "seaproject/my-app:cdd9fce",
+    "pullPolicy": "IfNotPresent"
+  }
+}
