@@ -9,7 +9,7 @@
       "memory": "128Mi"
     }
   },
-  "replicaCount": 1,
+  "replicaCount": 2,
   "containerPort": 8080,
   "image": {
     "repository": "seaproject/projectgreat",
