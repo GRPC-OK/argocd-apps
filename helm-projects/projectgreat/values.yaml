@@ -9,8 +9,8 @@
       "memory": "128Mi"
     }
   },
-  "replicaCount": 2,
-  "containerPort": 8080,
+  "replicaCount": 1,
+  "containerPort": 3000,
   "image": {
     "repository": "seaproject/projectgreat",
     "tag": "seaproject/my-app:cdd9fce",
