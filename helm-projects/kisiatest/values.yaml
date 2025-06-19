@@ -13,7 +13,7 @@
   "replicaCount": 1,
   "image": {
     "repository": "seaproject/my-app",
-    "tag": "eb02433",
+    "tag": "test123",
     "pullPolicy": "IfNotPresent"
   },
   "host": "kisiatest.intellisia.site"
