@@ -1,0 +1,20 @@
+{
+  "port": 8080,
+  "resources": {
+    "limits": {
+      "cpu": "200m",
+      "memory": "256Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "128Mi"
+    }
+  },
+  "replicaCount": 1,
+  "image": {
+    "repository": "seaproject/my-app",
+    "tag": "ccb91a2",
+    "pullPolicy": "IfNotPresent"
+  },
+  "host": "testdsdsa.intellisia.site"
+}
